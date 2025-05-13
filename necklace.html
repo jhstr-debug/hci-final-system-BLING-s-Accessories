@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!--=============== REMIXICONS ===============-->
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   <link rel="stylesheet" type="text/css" href="necklce.css">
+   <link rel="icon" type="image/png+xml" href="LOGO OF BLING.png">
+   <title>BLING's Accessories </title>
+   
+</head>
+<body>
+  <!-- Navigation Bar -->
+    <div class="nav-container">
+        <nav class="navbar">
+            <a href="index.html" class="logo">BLING's</a>
+            
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="company.html">Company</a>
+                <div class="dropdown">
+                    <a href="product.html"class="active">Products</a>
+                    <div class="dropdown-content">
+                        <a href="necklace.html">Necklace</a>
+                        <a href="rings.html">Rings</a>
+                        <a href="bracelet.html">Bracelets</a>
+                    </div>
+                </div>
+                <a href="consult.html">Consult</a>
+                <div class="dropdown">
+                    <a href="user.html">Users</a>
+                    <div class="dropdown-content">
+                    </div>
+                </div>
+                <a href="About us.html">About us</a>
+            </div>
+        </nav>
+    </div>
+
+   <!-- Main Content -->
+   <div class="main-content">
+      <h1 class="page-title">BLING's Luxury Necklace</h1>
+      
+      <div class="panel-wrapper">
+         <!-- Product Grid - 9 rows x 4 columns -->
+         <div class="product-grid">
+            <!-- Row 1 -->
+            <div class="product-panel">
+               <img src="pink-necklace.webp" alt="Pink Diamond Necklace">
+               <p>Pink Diamond Necklace<br>Price: $100k</p>
+               <button class="add-to-cart">Add to cart</button>
+            </div>
+            <div class="product-panel">
+               <img src="g-necklace.jpg" alt="Gold Necklace">
+               <p>Gold Necklace<br>Price: $29.99k</p>
+               <button class="add-to-cart">Add to cart</button>
+            </div>
+            <div class="product-panel">
+               <img src="d-necklace.jpg" alt="Diamond Necklace">
+               <p>Diamond Necklace<br>Price: $94.99k</p>
+               <button class="add-to-cart">Add to cart</button>
+            </div>
+            <div class="product-panel">
+               <img src="p-necklace.webp" alt="Pearl Necklace">
+               <p>Pearl Necklace<br>Price: $50k</p>
+               <button class="add-to-cart">Add to cart</button>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="product-panel">
+               <img src="s-necklace.webp" alt="Silver Necklace">
+               <p>Silver Neckalce<br>Price: $15.99k</p>
+               <button class="add-to-cart">Add to cart</button>
+            </div>
+            <div class="product-panel">
+               <img src="r-necklace.webp" alt="Ruby Necklace">
+               <p>Ruby Necklace<br>Price: $75.85k</p>
+               <button class="add-to-cart">Add to cart</button>
+            </div>
+            <div class="product-panel">
+               <img src="sa-necklace.jpg" alt="Sapphire Necklace">
+               <p>Sapphire Necklace<br>Price: $80k</p>
+               <button class="add-to-cart">Add to cart</button>
+            </div>
+            <div class="product-panel">
+               <img src="e-necklace.webp" alt="Emerald Necklace">
+               <p>Emerald Necklace<br>Price: $90.99k</p>
+               <button class="add-to-cart">Add to cart</button>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="product-panel">
+               <img src="o-necklace.jpg" alt="Opal Necklace">
+               <p>Opal Necklace<br>Price: $73.50k</p>
+               <button class="add-to-cart">Add to cart</button>
+            </div>
+            <div class="product-panel">
+               <img src="platinum-necklace.jpg" alt="Platinum Necklace">
+               <p>Platinum Necklace<br>Price: $20k</p>
+               <button class="add-to-cart">Add to cart</button>
+            </div>
+            <div class="product-panel">
+               <img src="a-necklace.webp" alt="Amethyst Necklace">
+               <p>Amethyst Necklace<br>Price: $45.99k</p>
+               <button class="add-to-cart">Add to cart</button>
+            </div>
+            <div class="product-panel">
+               <img src="t-necklace.webp" alt="Turquoise Necklace">
+               <p>Turquoise Necklace<br>Price: $28.90k</p>
+               <button class="add-to-cart">Add to cart</button>
+            </div>
+
+
+      <!-- Shopping Cart -->
+      <div class="cart-container">
+         <div class="cart-header">
+            <div class="cart-icon">
+               <i class="ri-shopping-cart-2-line"></i>
+               My Cart
+            </div>
+            <div class="cart-count" id="cart-count">0</div>
+         </div>
+         
+         <div class="cart-items" id="cart-items">
+            <div class="cart-empty">Your cart is empty</div>
+         </div>
+         
+         <div class="cart-footer">
+            <div class="cart-total">Total: <span class="cart-total-price" id="cart-total">$0.00</span></div>
+            <button class="checkout-btn">Checkout</button>
+         </div>
+      </div>
+   </div>
+
+   <!--=============== MAIN JS ===============-->
+   <script>
+     // Toggle menu and icons for mobile
+const navToggle = document.getElementById('nav-toggle');
+const navMenu = document.getElementById('nav-menu');
+
+if (navToggle) {
+   navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('show-menu');
+      navToggle.classList.toggle('show-icon');
+   });
+}
+
+// Shopping cart functionality
+const addToCartButtons = document.querySelectorAll('.add-to-cart');
+const cartItems = document.getElementById('cart-items');
+const cartCount = document.getElementById('cart-count');
+const cartTotal = document.getElementById('cart-total');
+const checkoutBtn = document.getElementById('checkout-btn');
+const paymentModal = document.getElementById('payment-modal');
+const paymentForm = document.getElementById('payment-form');
+const closeModalBtn = document.getElementById('close-modal');
+const receiptModal = document.getElementById('receipt-modal');
+const receiptContent = document.getElementById('receipt-content');
+const closeReceiptBtn = document.getElementById('close-receipt');
+
+// Initialize cart
+let cart = [];
+let count = 0;
+let total = 0;
+
+// Add to cart functionality
+addToCartButtons.forEach((button, index) => {
+   button.addEventListener('click', () => {
+      const productPanel = button.closest('.product-panel');
+      const productImg = productPanel.querySelector('img').src;
+      const productInfo = productPanel.querySelector('p').textContent.split('Price:');
+      const productName = productInfo[0].trim();
+      const productPrice = parseFloat(productInfo[1].replace('$', '').replace('k', '000').trim());
+      
+      // Add item to cart
+      cart.push({
+         id: Date.now() + index,
+         name: productName,
+         price: productPrice,
+         image: productImg
+      });
+      
+      // Update cart count
+      count++;
+      cartCount.textContent = count;
+      
+      // Update total
+      total += productPrice;
+      cartTotal.textContent = '$' + formatPrice(total);
+      
+      // Update cart display
+      updateCartDisplay();
+      
+      // Add animation effect to button
+      button.classList.add('clicked');
+      setTimeout(() => {
+         button.classList.remove('clicked');
+      }, 300);
+   });
+});
+
+// Format price with commas
+function formatPrice(price) {
+   return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+// Update cart display
+function updateCartDisplay() {
+   if (cart.length === 0) {
+      cartItems.innerHTML = '<div class="cart-empty">Your cart is empty</div>';
+      if (checkoutBtn) {
+         checkoutBtn.style.display = 'none';
+      }
+      return;
+   }
+   
+   cartItems.innerHTML = '';
+   cart.forEach(item => {
+      const cartItem = document.createElement('div');
+      cartItem.classList.add('cart-item');
+      cartItem.innerHTML = `
+         <div class="cart-item-image">
+            <img src="${item.image}" alt="${item.name}">
+         </div>
+         <div class="cart-item-details">
+            <div class="cart-item-name">${item.name}</div>
+            <div class="cart-item-price">$${formatPrice(item.price)}</div>
+         </div>
+         <div class="cart-remove" data-id="${item.id}">
+            <i class="ri-delete-bin-line"></i>
+         </div>
+      `;
+      cartItems.appendChild(cartItem);
+      
+      // Add remove functionality
+      const removeBtn = cartItem.querySelector('.cart-remove');
+      removeBtn.addEventListener('click', () => {
+         removeFromCart(item.id);
+      });
+   });
+   
+   // Show checkout button if items in cart
+   if (checkoutBtn) {
+      checkoutBtn.style.display = 'block';
+   }
+}
+
+// Remove item from cart
+function removeFromCart(id) {
+   const itemIndex = cart.findIndex(item => item.id === id);
+   if (itemIndex !== -1) {
+      total -= cart[itemIndex].price;
+      cart.splice(itemIndex, 1);
+      count--;
+      
+      cartCount.textContent = count;
+      cartTotal.textContent = '$' + formatPrice(total);
+      updateCartDisplay();
+   }
+}
+
+// Checkout functionality
+if (checkoutBtn) {
+   checkoutBtn.addEventListener('click', () => {
+      if (cart.length > 0) {
+         openPaymentModal();
+      }
+   });
+}
+
+// Open payment modal
+function openPaymentModal() {
+   if (paymentModal) {
+      paymentModal.style.display = 'flex';
+      
+      // Update payment summary
+      const paymentSummary = document.getElementById('payment-summary');
+      if (paymentSummary) {
+         paymentSummary.innerHTML = '';
+         cart.forEach(item => {
+            const itemRow = document.createElement('div');
+            itemRow.classList.add('summary-item');
+            itemRow.innerHTML = `
+               <span>${item.name}</span>
+               <span>$${formatPrice(item.price)}</span>
+            `;
+            paymentSummary.appendChild(itemRow);
+         });
+         
+         const totalRow = document.createElement('div');
+         totalRow.classList.add('summary-total');
+         totalRow.innerHTML = `
+            <span>Total:</span>
+            <span>$${formatPrice(total)}</span>
+         `;
+         paymentSummary.appendChild(totalRow);
+      }
+   }
+}
+
+// Close payment modal
+if (closeModalBtn) {
+   closeModalBtn.addEventListener('click', () => {
+      paymentModal.style.display = 'none';
+   });
+}
+
+// Handle payment form submission
+if (paymentForm) {
+   paymentForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      // Validate form inputs
+      const cardNumber = document.getElementById('card-number').value;
+      const cardName = document.getElementById('card-name').value;
+      const expiry = document.getElementById('expiry').value;
+      const cvv = document.getElementById('cvv').value;
+      
+      if (!validateCard(cardNumber, cardName, expiry, cvv)) {
+         return;
+      }
+      
+      // Process payment (in a real app, this would connect to a payment gateway)
+      processPayment(cardNumber, cardName, expiry, cvv);
+   });
+}
+
+// Validate payment card details
+function validateCard(cardNumber, cardName, expiry, cvv) {
+   let isValid = true;
+   
+   // Simple validation - would be more robust in production
+   if (cardNumber.length < 13 || cardNumber.length > 19) {
+      showError('card-number', 'Invalid card number');
+      isValid = false;
+   }
+   
+   if (cardName.trim() === '') {
+      showError('card-name', 'Name is required');
+      isValid = false;
+   }
+   
+   if (!expiry.match(/^\d{2}\/\d{2}$/)) {
+      showError('expiry', 'Format must be MM/YY');
+      isValid = false;
+   }
+   
+   if (cvv.length < 3 || cvv.length > 4) {
+      showError('cvv', 'Invalid CVV');
+      isValid = false;
+   }
+   
+   return isValid;
+}
+
+// Show error message
+function showError(fieldId, message) {
+   const field = document.getElementById(fieldId);
+   const errorSpan = document.createElement('span');
+   errorSpan.classList.add('error-message');
+   errorSpan.textContent = message;
+   
+   // Remove any existing error messages
+   const existingError = field.parentNode.querySelector('.error-message');
+   if (existingError) {
+      existingError.remove();
+   }
+   
+   // Add new error message
+   field.parentNode.appendChild(errorSpan);
+   
+   // Highlight the field
+   field.classList.add('error-input');
+   
+   // Remove error styling after input
+   field.addEventListener('input', () => {
+      field.classList.remove('error-input');
+      if (field.parentNode.querySelector('.error-message')) {
+         field.parentNode.querySelector('.error-message').remove();
+      }
+   }, { once: true });
+}
+
+// Process payment and generate receipt
+function processPayment(cardNumber, cardName, expiry, cvv) {
+   // In a real app, this would connect to a payment API
+   // For demo, we'll simulate payment processing
+   
+   // Show loading state
+   const submitBtn = paymentForm.querySelector('button[type="submit"]');
+   const originalText = submitBtn.textContent;
+   submitBtn.disabled = true;
+   submitBtn.textContent = 'Processing...';
+   
+   // Simulate API call with timeout
+   setTimeout(() => {
+      // Hide payment modal
+      paymentModal.style.display = 'none';
+      
+      // Generate receipt 
+      generateReceipt(cardName, cardNumber);
+      
+      // Reset payment form
+      paymentForm.reset();
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalText;
+      
+      // Clear cart after successful payment
+      clearCart();
+   }, 1500);
+}
+
+// Generate receipt
+function generateReceipt(cardName, cardNumber) {
+   // Get current date and time
+   const now = new Date();
+   const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+   const timeOptions = { hour: '2-digit', minute: '2-digit' };
+   
+   const orderDate = now.toLocaleDateString('en-US', dateOptions);
+   const orderTime = now.toLocaleTimeString('en-US', timeOptions);
+   const orderNumber = 'ORD-' + now.getTime().toString().slice(-8);
+   
+   // Last 4 digits of card
+   const last4 = cardNumber.slice(-4);
+   
+   // Create receipt HTML
+   let receiptHTML = `
+      <div class="receipt-header">
+         <h3>Purchase Receipt</h3>
+         <p>Thank you for your order!</p>
+      </div>
+      <div class="receipt-info">
+         <p><strong>Order Number:</strong> ${orderNumber}</p>
+         <p><strong>Date:</strong> ${orderDate}</p>
+         <p><strong>Time:</strong> ${orderTime}</p>
+         <p><strong>Payment Method:</strong> Card ending in ${last4}</p>
+         <p><strong>Name:</strong> ${cardName}</p>
+      </div>
+      <div class="receipt-items">
+         <h4>Order Summary</h4>
+         <table>
+            <thead>
+               <tr>
+                  <th>Item</th>
+                  <th>Price</th>
+               </tr>
+            </thead>
+            <tbody>
+   `;
+   
+   // Add items to receipt
+   cart.forEach(item => {
+      receiptHTML += `
+         <tr>
+            <td>${item.name}</td>
+            <td>$${formatPrice(item.price)}</td>
+         </tr>
+      `;
+   });
+   
+   // Add total and close receipt HTML
+   receiptHTML += `
+            </tbody>
+            <tfoot>
+               <tr>
+                  <th>Total</th>
+                  <td>$${formatPrice(total)}</td>
+               </tr>
+            </tfoot>
+         </table>
+      </div>
+      <div class="receipt-footer">
+         <p>Thank you for shopping with us!</p>
+         <button id="print-receipt" class="print-btn">Print Receipt</button>
+      </div>
+   `;
+   
+   // Show receipt modal
+   if (receiptContent && receiptModal) {
+      receiptContent.innerHTML = receiptHTML;
+      receiptModal.style.display = 'flex';
+      
+      // Add print functionality
+      const printBtn = document.getElementById('print-receipt');
+      if (printBtn) {
+         printBtn.addEventListener('click', () => {
+            window.print();
+         });
+      }
+   }
+}
+
+// Close receipt modal
+if (closeReceiptBtn) {
+   closeReceiptBtn.addEventListener('click', () => {
+      receiptModal.style.display = 'none';
+   });
+}
+
+// Clear cart after purchase
+function clearCart() {
+   cart = [];
+   count = 0;
+   total = 0;
+   cartCount.textContent = count;
+   cartTotal.textContent = '$0';
+   updateCartDisplay();
+}
+
+// Add event listeners for card input formatting
+document.addEventListener('DOMContentLoaded', () => {
+   // Format card number with spaces
+   const cardNumberInput = document.getElementById('card-number');
+   if (cardNumberInput) {
+      cardNumberInput.addEventListener('input', (e) => {
+         let value = e.target.value.replace(/\s+/g, '').replace(/[^0-9]/gi, '');
+         let formattedValue = '';
+         
+         for (let i = 0; i < value.length; i++) {
+            if (i > 0 && i % 4 === 0) {
+               formattedValue += ' ';
+            }
+            formattedValue += value[i];
+         }
+         
+         // Limit to 19 digits (16 digits + 3 spaces)
+         if (value.length <= 16) {
+            e.target.value = formattedValue;
+         } else {
+            e.target.value = formattedValue.slice(0, 19);
+         }
+      });
+   }
+   
+   // Format expiry date with slash
+   const expiryInput = document.getElementById('expiry');
+   if (expiryInput) {
+      expiryInput.addEventListener('input', (e) => {
+         let value = e.target.value.replace(/[^0-9]/g, '');
+         
+         if (value.length > 2) {
+            value = value.slice(0, 2) + '/' + value.slice(2, 4);
+         }
+         
+         e.target.value = value;
+      });
+   }
+});
+
+// Toggle hamburger menu
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+        
+        // Mobile dropdown handling
+        if (window.innerWidth <= 768) {
+            const dropdowns = document.querySelectorAll('.dropdown');
+            
+            dropdowns.forEach(dropdown => {
+                const dropdownLink = dropdown.querySelector('a');
+                
+                dropdownLink.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    dropdown.classList.toggle('active');
+                    
+                    // Close other dropdowns
+                    dropdowns.forEach(otherDropdown => {
+                        if (otherDropdown !== dropdown) {
+                            otherDropdown.classList.remove('active');
+                        }
+                    });
+                });
+            });
+        }
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (
+                !e.target.closest('.nav-links') && 
+                !e.target.closest('.hamburger') && 
+                navLinks.classList.contains('active')
+            ) {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+                
+                // Close all dropdowns
+                document.querySelectorAll('.dropdown').forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+            }
+        });
+        
+        // Close menu on resize to desktop
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+                
+                // Close all dropdowns
+                document.querySelectorAll('.dropdown').forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+            }
+        });
+   </script>
+</body>
+</html>

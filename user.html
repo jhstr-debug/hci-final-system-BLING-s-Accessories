@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="user.css">
+    <link rel="icon" type="image/png+xml" href="LOGO OF BLING.png">
+    
+    <title>Bling's Accessories</title>
+    
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="nav-container">
+        <nav class="navbar">
+            <a href="index.html" class="logo">BLING's</a>
+            
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="company.html">Company</a>
+                <div class="dropdown">
+                    <a href="product.html">Products</a>
+                    <div class="dropdown-content">
+                        <a href="necklace.html">Necklaces</a>
+                        <a href="rings.html">Rings</a>
+                        <a href="bracelet.html">Bracelets</a>
+                    </div>
+                </div>
+                <a href="consult.html">Consult</a>
+                <div class="dropdown">
+                    <a href="user.html"class="active">Users</a>
+                </div>
+                <a href="About us.html">About us</a>
+            </div>
+        </nav>
+    </div>
+    
+   <!-- Main Content -->
+   <div class="main-content">
+      <!-- Profile Header -->
+      <div class="profile-header">
+         <div class="profile-avatar">
+            JC
+         </div>
+         <div class="profile-info">
+            <h1>John Ced</h1>
+            <p>Member since: January 15, 2024</p>
+            <p>john.ced@example.com</p>
+         </div>
+      </div>
+      
+      <!-- Profile Tabs -->
+      <div class="profile-tabs">
+         <div class="tab" onclick="switchTab('profile')">My Profile</div>
+         <div class="tab" onclick="switchTab('orders')">Orders</div>
+         <div class="tab" onclick="switchTab('consultations')">Consultations</div>
+         <div class="tab" onclick="switchTab('wishlist')">Wishlist</div>
+      </div>
+      
+      <!-- Profile Content -->
+      <div id="profile" class="tab-content active">
+         <form id="profileForm">
+            <div class="form-section">
+               <h3>Personal Information</h3>
+               <div class="form-row">
+                  <div class="form-group">
+                     <label for="firstName">First Name</label>
+                     <input type="text" id="firstName" name="firstName" value="Jane">
+                  </div>
+                  <div class="form-group">
+                     <label for="lastName">Last Name</label>
+                     <input type="text" id="lastName" name="lastName" value="Doe">
+                  </div>
+               </div>
+               <div class="form-row">
+                  <div class="form-group">
+                     <label for="email">Email</label>
+                     <input type="email" id="email" name="email" value="jane.doe@example.com">
+                  </div>
+                  <div class="form-group">
+                     <label for="phone">Phone</label>
+                     <input type="tel" id="phone" name="phone" value="(555) 123-4567">
+                  </div>
+               </div>
+               <div class="form-row">
+                  <div class="form-group">
+                     <label for="dob">Date of Birth</label>
+                     <input type="date" id="dob" name="dob" value="1990-05-15">
+                  </div>
+                  <div class="form-group">
+                     <label for="gender">Gender</label>
+                     <select id="gender" name="gender">
+                        <option value="female" selected>Female</option>
+                        <option value="male">Male</option>
+                        <option value="other">Other</option>
+                        <option value="prefer-not">Prefer not to say</option>
+                     </select>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="form-section">
+               <h3>Address Information</h3>
+               <div class="form-row">
+                  <div class="form-group">
+                     <label for="address">Street Address</label>
+                     <input type="text" id="address" name="address" value="123 Fashion Avenue">
+                  </div>
+                  <div class="form-group">
+                     <label for="apartment">Apartment/Suite</label>
+                     <input type="text" id="apartment" name="apartment" value="Apt 4B">
+                  </div>
+               </div>
+               <div class="form-row">
+                  <div class="form-group">
+                     <label for="city">City</label>
+                     <input type="text" id="city" name="city" value="Styleville">
+                  </div>
+                  <div class="form-group">
+                     <label for="state">State/Province</label>
+                     <input type="text" id="state" name="state" value="Fashionland">
+                  </div>
+               </div>
+               <div class="form-row">
+                  <div class="form-group">
+                     <label for="zip">ZIP/Postal Code</label>
+                     <input type="text" id="zip" name="zip" value="12345">
+                  </div>
+                  <div class="form-group">
+                     <label for="country">Country</label>
+                     <input type="text" id="country" name="country" value="United States">
+                  </div>
+               </div>
+            </div>
+            
+            <div class="form-section">
+               <h3>Security</h3>
+               <div class="form-row">
+                  <div class="form-group">
+                     <label for="currentPassword">Current Password</label>
+                     <input type="password" id="currentPassword" name="currentPassword">
+                  </div>
+                  <div class="form-group">
+                     <label for="newPassword">New Password</label>
+                     <input type="password" id="newPassword" name="newPassword">
+                  </div>
+               </div>
+               <div class="form-row">
+                  <div class="form-group">
+                     <label for="confirmPassword">Confirm New Password</label>
+                     <input type="password" id="confirmPassword" name="confirmPassword">
+                  </div>
+                  <div class="form-group">
+                     <label for="securityQuestion">Security Question</label>
+                     <select id="securityQuestion" name="securityQuestion">
+                        <option value="petName" selected>What was your first pet's name?</option>
+                        <option value="motherMaiden">What is your mother's maiden name?</option>
+                        <option value="firstSchool">What was the name of your first school?</option>
+                        <option value="birthCity">In what city were you born?</option>
+                     </select>
+                  </div>
+               </div>
+               <div class="form-row">
+                  <div class="form-group">
+                     <label for="securityAnswer">Security Answer</label>
+                     <input type="text" id="securityAnswer" name="securityAnswer" value="Sparkles">
+                  </div>
+               </div>
+            </div>
+            
+            <div class="form-section">
+               <h3>Preferences</h3>
+               <div class="preferences-group">
+                  <div class="form-group checkbox-group">
+                     <label>
+                        <input type="checkbox" name="newsletter" checked> Receive newsletters and promotional emails
+                     </label>
+                  </div>
+                  <div class="form-group checkbox-group">
+                     <label>
+                        <input type="checkbox" name="smsAlerts" checked> Receive SMS alerts about new arrivals and sales
+                     </label>
+                  </div>
+                  <div class="form-group checkbox-group">
+                     <label>
+                        <input type="checkbox" name="orderUpdates" checked> Receive order updates via email
+                     </label>
+                  </div>
+               </div>
+            </div>
+            
+            <button type="submit" class="save-btn">Save Changes</button>
+         </form>
+      </div>
+      
+      <!-- Orders Content -->
+      <div id="orders" class="tab-content">
+         <div class="order-card">
+            <div class="order-header">
+               <div class="order-id">Order #BL12345</div>
+               <div class="order-date">April 15, 2025</div>
+               <div class="order-status">Delivered</div>
+            </div>
+            <div class="order-items">
+               <div class="order-item">
+                  <div>Crystal Statement Earrings x 1</div>
+                  <div>$34.99</div>
+               </div>
+               <div class="order-item">
+                  <div>Gold Chain Bracelet x 1</div>
+                  <div>$29.99</div>
+               </div>
+            </div>
+            <div class="order-total">
+               <div>Total:</div>
+               <div>$64.98</div>
+            </div>
+            <button class="view-details-btn action-btn">View Details</button>
+         </div>
+         
+         <div class="order-card">
+            <div class="order-header">
+               <div class="order-id">Order #BL12289</div>
+               <div class="order-date">March 22, 2025</div>
+               <div class="order-status">Delivered</div>
+            </div>
+            <div class="order-items">
+               <div class="order-item">
+                  <div>Minimalist Silver Watch x 1</div>
+                  <div>$89.99</div>
+               </div>
+            </div>
+            <div class="order-total">
+               <div>Total:</div>
+               <div>$89.99</div>
+            </div>
+            <button class="view-details-btn action-btn">View Details</button>
+         </div>
+      </div>
+      
+      <!-- Consultations Content -->
+      <div id="consultations" class="tab-content">
+         <div class="consultation-card">
+            <div class="consultation-header">
+               <div class="consultation-date">May 12, 2025</div>
+               <div class="consultation-status status-confirmed">Confirmed</div>
+            </div>
+            <div class="consultation-details">
+               <p><strong>Type:</strong> Styling Advice</p>
+               <p><strong>Time:</strong> 2:00 PM</p>
+               <p><strong>Consultant:</strong> Sarah Johnson</p>
+               <p><strong>Notes:</strong> Personal styling session for summer wedding guest outfits and accessories.</p>
+            </div>
+            <div class="action-buttons">
+               <button class="reschedule-btn action-btn">Reschedule</button>
+               <button class="cancel-btn action-btn">Cancel</button>
+            </div>
+         </div>
+         
+         <div class="consultation-card">
+            <div class="consultation-header">
+               <div class="consultation-date">March 8, 2025</div>
+               <div class="consultation-status status-completed">Completed</div>
+            </div>
+            <div class="consultation-details">
+               <p><strong>Type:</strong> Product Selection</p>
+               <p><strong>Time:</strong> 11:30 AM</p>
+               <p><strong>Consultant:</strong> Michael Chen</p>
+               <p><strong>Notes:</strong> Help choosing watches and bracelets for daily office wear.</p>
+            </div>
+            <div class="action-buttons">
+               <button class="view-details-btn action-btn">View Summary</button>
+            </div>
+         </div>
+      </div>
+      
+      <!-- Wishlist Content -->
+      <div id="wishlist" class="tab-content">
+         <div class="wishlist-items">
+            <div class="wishlist-item">
+               <div class="wishlist-img">
+                  <i class=""><img src="a-necklace.webp"></i>
+               </div>
+               <div class="wishlist-info">
+                  <div class="wishlist-title">Amethyst Necklace</div>
+                  <div class="wishlist-price">$45.99</div>
+                  <div class="wishlist-actions">
+                     <button class="move-to-cart"><i class="ri-shopping-cart-line"></i> Add to Cart</button>
+                     <button class="remove-wishlist"><i class="ri-delete-bin-line"></i> Remove</button>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="wishlist-item">
+               <div class="wishlist-img">
+                  <i class=""><img src="e-bracelet.jpg"></i>
+               </div>
+               <div class="wishlist-info">
+                  <div class="wishlist-title">Emerald Bracelet</div>
+                  <div class="wishlist-price">$149.99</div>
+                  <div class="wishlist-actions">
+                     <button class="move-to-cart"><i class="ri-shopping-cart-line"></i> Add to Cart</button>
+                     <button class="remove-wishlist"><i class="ri-delete-bin-line"></i> Remove</button>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="wishlist-item">
+               <div class="wishlist-img">
+                  <i class=""><img src="sa-ring.webp"></i>
+               </div>
+               <div class="wishlist-info">
+                  <div class="wishlist-title">Sapphire Ring</div>
+                  <div class="wishlist-price">$79.99</div>
+                  <div class="wishlist-actions">
+                     <button class="move-to-cart"><i class="ri-shopping-cart-line"></i> Add to Cart</button>
+                     <button class="remove-wishlist"><i class="ri-delete-bin-line"></i> Remove</button>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="wishlist-item">
+               <div class="wishlist-img">
+                  <i class=""><img src="pink-necklace.webp"></i>
+               </div>
+               <div class="wishlist-info">
+                  <div class="wishlist-title">Pink Diamond Necklace</div>
+                  <div class="wishlist-price">$249.99</div>
+                  <div class="wishlist-actions">
+                     <button class="move-to-cart"><i class="ri-shopping-cart-line"></i> Add to Cart</button>
+                     <button class="remove-wishlist"><i class="ri-delete-bin-line"></i> Remove</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>Bling's</h4>
+                    <p>Discover trendy, affordable, and stylish pieces that bring out your sparkle. Shine every day with Bling's Accessories! 💖</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="necklace.html">Necklaces</a></li>
+                        <li><a href="bracelet.html">Bracelets</a></li>
+                        <li><a href="rings.html">Rings</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="About us.html">About Us</a></li>
+                        <li><a href="consult.html">Consult Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="ri-facebook-fill"></i></a>
+                        <a href="#"><i class="ri-instagram-line"></i></a>
+                        <a href="#"><i class="ri-twitter-fill"></i></a>
+                        <a href="#"><i class="ri-pinterest-line"></i></a>
+                    </div>
+                </div>
+            </div>
+              <div class="footer-bottom">
+                    <p>&copy; 2020 Bling's Accessories. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+   <script >
+const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+        
+        // Mobile dropdown handling
+        if (window.innerWidth <= 768) {
+            const dropdowns = document.querySelectorAll('.dropdown');
+            
+            dropdowns.forEach(dropdown => {
+                const dropdownLink = dropdown.querySelector('a');
+                
+                dropdownLink.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    dropdown.classList.toggle('active');
+                    
+                    // Close other dropdowns
+                    dropdowns.forEach(otherDropdown => {
+                        if (otherDropdown !== dropdown) {
+                            otherDropdown.classList.remove('active');
+                        }
+                    });
+                });
+            });
+        }
+
+// 3. Create a function to display the dropdown
+const toggleItem = (item) =>{
+    // 3.1. Select each dropdown content
+    const dropdownContainer = item.querySelector('.dropdown__menu')
+
+    // 6. If the same item contains the show-dropdown class, remove
+    if(item.classList.contains('show-dropdown')){
+        dropdownContainer.removeAttribute('style')
+        item.classList.remove('show-dropdown')
+    } else{
+        // 4. Add the maximum height to the dropdown content and add the show-dropdown class
+        dropdownContainer.style.height = dropdownContainer.scrollHeight + 'px'
+        item.classList.add('show-dropdown')
+    }
+}
+
+/*=============== PROFILE TABS ===============*/
+function switchTab(tabId) {
+    // Hide all tab contents
+    document.querySelectorAll('.tab-content').forEach(function(content) {
+        content.classList.remove('active');
+    });
+    
+    // Remove active class from all tabs
+    document.querySelectorAll('.tab').forEach(function(tab) {
+        tab.classList.remove('active');
+    });
+    
+    // Show the selected tab content
+    document.getElementById(tabId).classList.add('active');
+    
+    // Add active class to the clicked tab
+    const clickedTab = Array.from(document.querySelectorAll('.tab')).find(
+        tab => tab.getAttribute('onclick') === `switchTab('${tabId}')`
+    );
+    
+    if (clickedTab) {
+        clickedTab.classList.add('active');
+    }
+}
+
+/*=============== FORM SUBMISSION ===============*/
+// Profile form submission
+const profileForm = document.getElementById('profileForm');
+if (profileForm) {
+    profileForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        // Show success message
+        alert('Profile changes saved successfully!');
+    });
+}
+
+// Consultation form submission
+const consultationForm = document.querySelector('.consultation-form');
+if (consultationForm) {
+    consultationForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        // Show success message
+        alert('Consultation request submitted successfully! We will get back to you within 24-48 hours.');
+    });
+}
+
+/*=============== WISHLIST ACTIONS ===============*/
+// Add to cart buttons
+const addToCartButtons = document.querySelectorAll('.move-to-cart');
+if (addToCartButtons) {
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const itemName = this.closest('.wishlist-item').querySelector('.wishlist-title').textContent;
+            alert(`${itemName} has been added to your cart!`);
+        });
+    });
+}
+
+// Remove from wishlist buttons
+const removeWishlistButtons = document.querySelectorAll('.remove-wishlist');
+if (removeWishlistButtons) {
+    removeWishlistButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const wishlistItem = this.closest('.wishlist-item');
+            const itemName = wishlistItem.querySelector('.wishlist-title').textContent;
+            
+            // Animate removal
+            wishlistItem.style.opacity = '0';
+            setTimeout(() => {
+                wishlistItem.remove();
+                alert(`${itemName} has been removed from your wishlist!`);
+            }, 300);
+        });
+    });
+}
+   </script>
+</body>
+</html>
